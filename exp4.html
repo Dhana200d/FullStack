@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ice Cream Delight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 250px;
+            border-radius: 15px;
+            transition: transform 0.5s;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            border: none;
+            background-color: #ff1493;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #c71585;
+        }
+
+        #description {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="title">Welcome to Ice Cream World 🍦</h1>
+    </header>
+
+    <div class="container">
+        <img id="iceImage" 
+        src="C:\Users\dhana\Downloads\Ice-cream-recipe-960x960-c-default.jpg" 
+        alt="Ice Cream">
+
+        <p id="description">
+            Ice cream is a delicious frozen dessert loved by everyone!
+        </p>
+
+        <button onclick="changeFlavor()">Change Flavor</button>
+        <button onclick="changeStyle()">Change Style</button>
+        <button onclick="toggleImage()">Show / Hide Image</button>
+        <button onclick="zoomImage()">Zoom Image</button>
+    </div>
+
+<script>
+    // 1️⃣ Change Content (DOM Manipulation)
+    function changeFlavor() {
+        document.getElementById("title").innerHTML = "Now Serving Chocolate Ice Cream 🍫";
+        document.getElementById("description").innerHTML = 
+        "Chocolate ice cream is rich, creamy, and everyone's favorite flavor!";
+    }
+
+    // 2️⃣ Change Style (DOM CSS Manipulation)
+    function changeStyle() {
+        document.body.style.backgroundColor = "#e0ffff";
+        document.getElementById("description").classList.toggle("highlight");
+    }
+
+    // 3️⃣ Show / Hide Element
+    function toggleImage() {
+        let img = document.getElementById("iceImage");
+        if (img.style.display === "none") {
+            img.style.display = "block";
+        } else {
+            img.style.display = "none";
+        }
+    }
+
+    // 4️⃣ Change Image Style (Transform Effect)
+    function zoomImage() {
+        let img = document.getElementById("iceImage");
+        img.style.transform = "scale(1.3)";
+    }
+</script>
+
+</body>
+</html>
