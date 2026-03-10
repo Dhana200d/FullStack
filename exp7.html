@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git Tutorial</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f4f6f8;
+            margin:0;
+            padding:0;
+        }
+
+        header{
+            background:#24292e;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        .container{
+            width:80%;
+            margin:auto;
+            padding:20px;
+        }
+
+        .section{
+            background:white;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            color:#24292e;
+        }
+
+        pre{
+            background:#000;
+            color:#00ff00;
+            padding:15px;
+            border-radius:5px;
+            overflow-x:auto;
+        }
+
+        footer{
+            text-align:center;
+            padding:10px;
+            background:#24292e;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Version Control using Git</h1>
+    <p>Mini Tutorial: Git & GitHub Operations</p>
+</header>
+
+<div class="container">
+
+<div class="section">
+<h2>1. Create a Git Repository</h2>
+<pre>
+mkdir my-project
+cd my-project
+git init
+</pre>
+</div>
+
+<div class="section">
+<h2>2. Add and Commit Files</h2>
+<pre>
+echo "Hello Git" > file.txt
+git add file.txt
+git commit -m "Initial commit"
+</pre>
+</div>
+
+<div class="section">
+<h2>3. Connect to GitHub and Push</h2>
+<pre>
+git remote add origin https://github.com/username/my-project.git
+git push -u origin main
+</pre>
+</div>
+
+<div class="section">
+<h2>4. Pull Latest Changes</h2>
+<pre>
+git pull origin main
+</pre>
+</div>
+
+<div class="section">
+<h2>5. Create and Switch Branch</h2>
+<pre>
+git branch feature-branch
+git checkout feature-branch
+</pre>
+</div>
+
+<div class="section">
+<h2>6. Merge Branch</h2>
+<pre>
+git checkout main
+git merge feature-branch
+git push origin main
+</pre>
+</div>
+
+</div>
+
+<footer>
+<p>Simple Git Tutorial Page</p>
+</footer>
+
+</body>
+</html>
