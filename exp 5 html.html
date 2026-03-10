@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxury Perfume Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fdf2f8;
+        }
+
+        h1 {
+            color: #b03060;
+        }
+
+        .perfume-card {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .perfume-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #b03060;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #800040;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Luxury Perfume Collection 🌸</h1>
+
+    <!-- Perfume Product -->
+    <div class="perfume-card" id="card1">
+        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f" alt="Perfume">
+        <h3>Rose Essence</h3>
+        <p>$49</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <!-- Search Box (Keyboard Event) -->
+    <h2>Search Perfume</h2>
+    <input type="text" id="searchBox" placeholder="Type perfume name...">
+
+    <!-- Subscription Form (Submit Event) -->
+    <h2>Subscribe for Offers</h2>
+    <form id="subscribeForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+
+<script>
+
+    // CLICK EVENT
+    function addToCart() {
+        alert("Perfume added to cart successfully!");
+    }
+
+    // HOVER EVENT
+    const card = document.getElementById("card1");
+
+    card.addEventListener("mouseover", function() {
+        card.style.transform = "scale(1.1)";
+    });
+
+    card.addEventListener("mouseout", function() {
+        card.style.transform = "scale(1)";
+    });
+
+    // KEYPRESS EVENT
+    const search = document.getElementById("searchBox");
+
+    search.addEventListener("keyup", function(event) {
+        console.log("You typed: " + event.target.value);
+    });
+
+    // SUBMIT EVENT
+    const form = document.getElementById("subscribeForm");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Thank you for subscribing!");
+    });
+
+</script>
+
+</body>
+</html>
