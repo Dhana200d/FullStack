@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cravings | Cake Shop</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+        body{
+            background:#fff8f2;
+            color:#333;
+        }
+        header{
+            background:#ff6f91;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        header h1{
+            color:white;
+            font-size:28px;
+        }
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-weight:500;
+        }
+        nav a:hover{
+            text-decoration:underline;
+        }
+        .hero{
+            height:90vh;
+            background:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587') center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+        }
+        .hero h2{
+            background:rgba(0,0,0,0.5);
+            color:white;
+            padding:20px 40px;
+            font-size:42px;
+            border-radius:10px;
+        }
+        section{
+            padding:60px;
+        }
+        .section-title{
+            text-align:center;
+            font-size:32px;
+            margin-bottom:40px;
+            color:#ff6f91;
+        }
+        .cakes{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+        }
+        .cake-card{
+            background:white;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            overflow:hidden;
+            transition:transform 0.3s;
+        }
+        .cake-card:hover{
+            transform:translateY(-10px);
+        }
+        .cake-card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+        .cake-card .content{
+            padding:20px;
+        }
+        .cake-card h3{
+            margin-bottom:10px;
+            color:#ff6f91;
+        }
+        .cake-card p{
+            font-size:14px;
+            margin-bottom:15px;
+        }
+        .price{
+            font-weight:bold;
+            font-size:16px;
+        }
+        .about{
+            display:flex;
+            gap:40px;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .about img{
+            width:100%;
+            max-width:500px;
+            border-radius:15px;
+        }
+        .about p{
+            font-size:16px;
+            line-height:1.8;
+        }
+        .contact{
+            background:#ff6f91;
+            color:white;
+            border-radius:20px;
+        }
+        .contact h3{
+            margin-bottom:20px;
+        }
+        .contact p{
+            font-size:16px;
+        }
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:40px;
+        }
+        @media(max-width:768px){
+            header{
+                flex-direction:column;
+            }
+            nav{
+                margin-top:10px;
+            }
+            .hero h2{
+                font-size:30px;
+            }
+            section{
+                padding:30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🍰 Sweet Cravings</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Delicious Cakes for Every Occasion</h2>
+</div>
+
+<section id="cakes">
+    <h2 class="section-title">Our Special Cakes</h2>
+    <div class="cakes">
+        <div class="cake-card">
+            <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa" alt="Chocolate Cake">
+            <div class="content">
+                <h3>Chocolate Truffle</h3>
+                <p>Rich, moist chocolate cake layered with silky truffle cream.</p>
+                <div class="price">₹650</div>
+            </div>
+        </div>
+        <div class="cake-card">
+            <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f" alt="Strawberry Cake">
+            <div class="content">
+                <h3>Strawberry Delight</h3>
+                <p>Soft vanilla sponge topped with fresh strawberries and cream.</p>
+                <div class="price">₹700</div>
+            </div>
+        </div>
+        <div class="cake-card">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c" alt="Red Velvet Cake">
+            <div class="content">
+                <h3>Red Velvet</h3>
+                <p>Classic red velvet with smooth cream cheese frosting.</p>
+                <div class="price">₹750</div>
+            </div>
+        </div>
+        <div class="cake-card">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e" alt="Black Forest Cake">
+            <div class="content">
+                <h3>Black Forest</h3>
+                <p>Chocolate sponge layered with cherries and whipped cream.</p>
+                <div class="price">₹680</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1519869325930-281384150729" alt="Bakery">
+        <p>
+            Sweet Cravings is a premium cake shop dedicated to crafting delicious, fresh, and beautifully designed cakes.
+            From birthdays to weddings, we make every celebration sweeter with our handcrafted cakes made from the finest ingredients.
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title" style="color:white">Contact Us</h2>
+    <h3>📍 Address</h3>
+    <p>Sweet Cravings Bakery, Main Road, Chennai</p><br>
+    <h3>📞 Phone</h3>
+    <p>+91 98765 43210</p><br>
+    <h3>✉ Email</h3>
+    <p>sweetcravings@gmail.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Sweet Cravings Cake Shop | Designed for College Project</p>
+</footer>
+
+</body>
+</html>
