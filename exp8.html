@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced JavaScript User Demo</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    /* Gradient Background */
+    background: linear-gradient(135deg,#667eea,#764ba2,#ff758c);
+    background-size:400% 400%;
+    animation:bgMove 10s infinite alternate;
+}
+
+/* Background Animation */
+@keyframes bgMove{
+    0%{background-position:left;}
+    100%{background-position:right;}
+}
+
+/* Card Design */
+.container{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    text-align:center;
+    width:350px;
+}
+
+/* Heading Style */
+h1{
+    color:#333;
+    margin-bottom:20px;
+}
+
+/* Button Style */
+button{
+    padding:12px 25px;
+    font-size:16px;
+    border:none;
+    border-radius:30px;
+    background: linear-gradient(45deg,#ff7e5f,#feb47b);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Button Hover */
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Output box */
+#output{
+    margin-top:25px;
+    font-size:18px;
+    color:#444;
+    padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>JavaScript User Loader</h1>
+
+<button onclick="loadUser()">Load User Info</button>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+
+var output = document.getElementById("output");
+
+
+function fetchUser(){
+
+    return new Promise(function(resolve){
+
+        setTimeout(function(){
+
+            var user = {
+                name:"Dhana",
+                age:20,
+                city:"Chennai"
+            };
+
+            resolve(user);
+
+        },2000);
+
+    });
+
+}
+
+
+function greetUser(user){
+
+    var message = "Hello " + user.name +
+                  "! You are " + user.age +
+                  " years old and live in " + user.city + ".";
+
+    return message;
+
+}
+
+
+function loadUser(){
+
+    output.innerHTML = "Loading user data...";
+
+    fetchUser().then(function(user){
+
+        var message = greetUser(user);
+
+        output.innerHTML = message;
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
