@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flower World</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fdf6f9;
+        }
+        .navbar {
+            background-color: #ff66b2;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .footer {
+            background-color: #ff66b2;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🌸 Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Flower World</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Flowers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 🌸 Header -->
+<div class="container text-center mt-4">
+    <h1>Welcome to Flower World 🌷</h1>
+    <p>Explore beautiful flowers and their meanings</p>
+</div>
+
+<!-- 🌸 Cards Section -->
+<div class="container mt-4">
+    <div class="row">
+
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="C:\Users\dhana\Downloads\images.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Rose</h5>
+                    <p class="card-text">Symbol of love and beauty.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#flowerModal">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="C:\Users\dhana\Downloads\images (1).jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Tulip</h5>
+                    <p class="card-text">Represents happiness and elegance.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#flowerModal">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="C:\Users\dhana\Downloads\images (1).jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Sunflower</h5>
+                    <p class="card-text">Symbol of positivity and energy.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#flowerModal">View More</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🌸 Modal -->
+<div class="modal fade" id="flowerModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Flower Details</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                Flowers are nature's most beautiful creation. They bring happiness and freshness to our lives.
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 🌸 Footer -->
+<div class="footer mt-4">
+    <p>© 2026 Flower World | Designed by Student</p>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
