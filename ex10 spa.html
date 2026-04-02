@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    
+    <aside class="sidebar">
+        <h2>⚡ MyApp</h2>
+        <a href="/" onclick="route(event)">Home</a>
+        <a href="/services" onclick="route(event)">Services</a>
+        <a href="/contact" onclick="route(event)">Contact</a>
+    </aside>
+
+    <main id="app"></main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+<div class="hero">
+    <h1></h1>
+    <p></p>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h3>⚡ Fast</h3>
+        <p>No page reload, smooth experience.</p>
+    </div>
+    <div class="card">
+        <h3>🔒 Secure</h3>
+        <p>Backend powered by Express.</p>
+    </div>
+    <div class="card">
+        <h3>📱 Responsive</h3>
+        <p>Works on all devices.</p>
+    </div>
+</div>
+
+<div class="stats">
+    <div class="stat">
+        <h2>100+</h2>
+        <p>Projects</p>
+    </div>
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Clients</p>
+    </div>
+    <div class="stat">
+        <h2>5⭐</h2>
+        <p>Rating</p>
+    </div>
+</div>
+const Home = () => `
+<div class="hero">
+    <h1>🚀 Build Faster Websites</h1>
+    <p>Modern SPA using Node.js & Express</p>
+</div>
+
+<div class="hero-image">
+    <img src="images/laptop.png" alt="Laptop">
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h3>⚡ Fast</h3>
+        <p>No page reload, smooth experience.</p>
+    </div>
+    <div class="card">
+        <h3>🔒 Secure</h3>
+        <p>Backend powered by Express.</p>
+    </div>
+    <div class="card">
+        <h3>📱 Responsive</h3>
+        <p>Works on all devices.</p>
+    </div>
+</div>
