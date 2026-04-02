@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Mini Tasks</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 20px;
+            transition: background 0.3s;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .box {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Tasks</h1>
+
+    <!-- 1. Change Background -->
+    <div class="box">
+        <h3>Change Background Color</h3>
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+
+    <!-- 2. Live Text -->
+    <div class="box">
+        <h3>Live Text Display</h3>
+        <input type="text" id="textInput" placeholder="Type something...">
+        <p id="output"></p>
+    </div>
+
+    <!-- 3. Show/Hide Password -->
+    <div class="box">
+        <h3>Password Toggle</h3>
+        <input type="password" id="password">
+        <button onclick="togglePassword()">Show/Hide</button>
+    </div>
+
+    <!-- 4. Image Slider -->
+    <div class="box">
+        <h3>Image Slider</h3>
+        <img id="slider" src="images (3).jpg">
+        <br>
+        <button onclick="prevImage()">Prev</button>
+        <button onclick="nextImage()">Next</button>
+    </div>
+
+    <!-- 5. Counter -->
+    <div class="box">
+        <h3>Counter</h3>
+        <h2 id="count">0</h2>
+        <button onclick="decrement()">-</button>
+        <button onclick="increment()">+</button>
+    </div>
+
+<script>
+    // 1. Change Background Color
+    function changeColor() {
+        const colors = ["lightblue", "lightgreen", "lightpink", "lightyellow"];
+        let random = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.background = random;
+    }
+
+    // 2. Live Text Display
+    const input = document.getElementById("textInput");
+    const output = document.getElementById("output");
+
+    input.addEventListener("keyup", function() {
+        output.textContent = input.value;
+    });
+
+    // 3. Password Toggle
+    function togglePassword() {
+        let pass = document.getElementById("password");
+        if (pass.type === "password") {
+            pass.type = "text";
+        } else {
+            pass.type = "password";
+        }
+    }
+
+    // 4. Image Slider
+    const images = [
+        "images (3).jpg",
+        "freenaturestock-2315-768x512.jpg",
+        "images (4).jpg"
+    ];
+
+    let index = 0;
+
+    function showImage() {
+        document.getElementById("slider").src = images[index];
+    }
+
+    function nextImage() {
+        index++;
+        if (index >= images.length) index = 0;
+        showImage();
+    }
+
+    function prevImage() {
+        index--;
+        if (index < 0) index = images.length - 1;
+        showImage();
+    }
+
+    // 5. Counter
+    let count = 0;
+
+    function increment() {
+        count++;
+        document.getElementById("count").textContent = count;
+    }
+
+    function decrement() {
+        count--;
+        document.getElementById("count").textContent = count;
+    }
+</script>
+
+</body>
+</html>
